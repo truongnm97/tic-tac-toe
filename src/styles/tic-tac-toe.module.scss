@@ -1,0 +1,86 @@
+.size-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  .size-button {
+    padding: 8px;
+    width: 40px;
+    aspect-ratio: 1;
+  }
+
+  .size {
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 8px;
+    height: 40px;
+    box-sizing: border-box;
+    gap: 2px;
+
+    .multiply {
+      font-size: 20px;
+    }
+  }
+}
+
+.board {
+  display: grid;
+  justify-content: center;
+  margin: 16px;
+
+  .cell {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border: 2px solid #ffe79e;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &.disabled {
+      cursor: not-allowed;
+    }
+
+    &:not(.disabled):hover {
+      background-color: #333333;
+    }
+
+    &.top-row {
+      border-top: none;
+    }
+
+    &.left-col {
+      border-left: none;
+    }
+
+    &.right-col {
+      border-right: none;
+    }
+
+    &.bottom-row {
+      border-bottom: none;
+    }
+  }
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.currentPlayer {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
